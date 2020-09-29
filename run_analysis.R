@@ -9,7 +9,7 @@ library("dplyr")
 
 file <- "UCIdata.zip"
 url <- "http://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
-dir <- "dataset"
+dir <- "UCI HAR Dataset"
 
 # File download verification
 if(!file.exists(file)){
@@ -22,14 +22,14 @@ if(!file.exists(dir)){
 }
 
 # Read and load the data
-xtest <- read.table("./dataset/test/X_test.txt", sep="",row.names = NULL)
-ytest <- read.table("./dataset/test/y_test.txt", sep="")
-xtrain <- read.table("./dataset/train/X_train.txt", sep="", row.names = NULL)
-ytrain <- read.table("./dataset/train/y_train.txt", sep="")
-features <- read.table("./dataset/features.txt", sep="")
-lbs <- read.table("./dataset/activity_labels.txt", sep='')
-subtest <- read.table("./dataset/test/subject_test.txt", sep="")
-subtrain <- read.table("./dataset/train/subject_train.txt", sep="")
+xtest <- read.table("./UCI HAR Dataset/test/X_test.txt", sep="",row.names = NULL)
+ytest <- read.table("./UCI HAR Dataset/test/y_test.txt", sep="")
+xtrain <- read.table("./UCI HAR Dataset/train/X_train.txt", sep="", row.names = NULL)
+ytrain <- read.table("./UCI HAR Dataset/train/y_train.txt", sep="")
+features <- read.table("./UCI HAR Dataset/features.txt", sep="")
+lbs <- read.table("./UCI HAR Dataset/activity_labels.txt", sep='')
+subtest <- read.table("./UCI HAR Dataset/test/subject_test.txt", sep="")
+subtrain <- read.table("./UCI HAR Dataset/train/subject_train.txt", sep="")
 
 ### Merges the training and the test sets to create one data set ###
 
